@@ -1,3 +1,5 @@
+Base Mode
+----------------------------------------------------
 1. How do you get all users from Chicago?
 -- SELECT * FROM "accounts" WHERE "city" = 'chicago';
 2. How do you get all users with usernames that contain the letter a?
@@ -16,3 +18,15 @@
 -- INSERT INTO accounts (username, city, transactions_completed, transactions_attempted, account_balance) VALUES ('rachel', 'minneapolis', 6, 12, 6023.00);
 9. The bank is losing money in Miami and Phoenix and needs to unload low transaction customers: How do you delete users that reside in miami OR phoenix and have completed fewer than 5 transactions.
 -- DELETE FROM "accounts" WHERE "transactions_completed" < '5' AND ("city" = 'miami' OR "city" ='phoenix');
+
+Stretch Mode
+----------------------------------------------------
+1. Anthony moved to Santa Fe.
+-- SELECT * FROM "accounts" WHERE "username" = 'anthony';
+-- UPDATE "accounts" SET "city" = 'santa fe' WHERE "user_id" = '5';
+2. Grace closed her account.
+-- SELECT * FROM "accounts" WHERE "username" = 'grace';
+-- DELETE FROM "accounts" WHERE "user_id" = '13';
+3. Travis made a withdrawl of $20,000. What is their new balance? NOTE: Research RETURNING
+
+4. The Bank needs to track last names. NOTE: Research ALTER TABLE
